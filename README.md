@@ -1,6 +1,6 @@
 # govterm
 
-Go bindings for libvterm, forked from https://github.com/neovim/libvterm and embedding the original C sources from https://www.leonerd.org.uk/code/libvterm for convenience.
+Go bindings for libvterm, forked from https://github.com/mattn/go-libvterm and embedding the original C sources from https://www.leonerd.org.uk/code/libvterm for convenience.
 
 ## Overview
 
