@@ -1,0 +1,38 @@
+diff -r libvterm/src/rect.h ../libvterm-0.3.3/src/rect.h
+5,7d4
+< #ifndef RECT_H
+< #define RECT_H
+< 
+60,61d56
+< 
+< #endif
+\ No newline at end of file
+diff -r libvterm/src/screen.c ../libvterm-0.3.3/src/screen.c
+173c173
+< static int screen_putglyph(VTermGlyphInfo *info, VTermPos pos, void *user)
+---
+> static int putglyph(VTermGlyphInfo *info, VTermPos pos, void *user)
+306c306
+< static int screen_erase(VTermRect rect, int selective, void *user)
+---
+> static int erase(VTermRect rect, int selective, void *user)
+406c406
+< static int screen_setpenattr(VTermAttr attr, VTermValue *val, void *user)
+---
+> static int setpenattr(VTermAttr attr, VTermValue *val, void *user)
+841c841
+<   .putglyph    = &screen_putglyph,
+---
+>   .putglyph    = &putglyph,
+844,845c844,845
+<   .erase       = &screen_erase,
+<   .setpenattr  = &screen_setpenattr,
+---
+>   .erase       = &erase,
+>   .setpenattr  = &setpenattr,
+diff -r libvterm/src/utf8.h ../libvterm-0.3.3/src/utf8.h
+5,6d4
+< #ifndef UTF8_H
+< #define UTF8_H
+42d39
+< #endif
