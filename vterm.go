@@ -178,6 +178,7 @@ func New(rows, cols int) *VTerm {
 		},
 	}
 	C._vterm_screen_set_callbacks(C.vterm_obtain_screen(term), pointer.Save(vt))
+	vt.screen.Reset(true)
 	return vt
 }
 
